@@ -1,0 +1,32 @@
+package com.WebDriverDemos;
+
+//To import these driver files Hit ctrl+Space to get the import driver list
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D01LaunchGoogleChrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//open browser
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		
+		//shift+right click on file to copy as path
+		
+		WebDriver driver = new ChromeDriver();
+		
+		//WebDriver is an Interface and ChromeDriver is a Class.
+		//We cannot create object of interface.
+		//we are creating object of ChromeDriver Class And implement webdriver.
+		
+		//Eclipse does not know about webdriver, so the step below doing for configuration
+		//Project -> Right click -> Build Path -> Configure Build Path -> Libraries -> Add External Jar Files -> Select Selenium Jar file folder
+		//-> Selenium server 4.10 file -> apply and close
+		
+		// Execution -> Java Automation dialog box -> Allow access -> browser will open
+		
+	}
+
+}

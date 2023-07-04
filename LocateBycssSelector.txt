@@ -1,0 +1,30 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D08CssSelectorSingleAttribute {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.facebook.com/");
+		
+		//inspetion window -> ctrl+f -> paste copied attribute and value in string,selector or xpath search bar -> tag highlighted yellow
+		WebElement username = driver.findElement(By.cssSelector("input[type=\"text\"]"));
+		username.sendKeys("sharmashailja91@gmail.com");
+		
+		WebElement password = driver.findElement(By.cssSelector("input[type=\"password\"]"));
+		password.sendKeys("abc@123");
+		
+		WebElement loginbtn = driver.findElement(By.className("button[name=\"login\"]"));
+		loginbtn.click();
+		
+	}
+
+}

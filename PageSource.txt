@@ -1,0 +1,23 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D04PageSource {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.flipkart.com/");
+		
+		String pagesource = driver.getPageSource();
+		System.out.println("pagesource:"+ pagesource);
+		
+		// output source code is known as RENDERED HTML of webpage
+		
+		driver.close();
+	}
+
+}

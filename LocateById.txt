@@ -1,0 +1,29 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D06LocateById {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();//window maximization
+		
+		driver.get("https://www.facebook.com/");//website url
+		
+		WebElement emailId = driver.findElement(By.id("email")); //automatically generated email
+		emailId.sendKeys("sharmashailja91@gmail.com");
+		
+		WebElement passwordId = driver.findElement(By.id("pass"));//automatically generated password
+		passwordId.sendKeys("password#123");
+		
+		WebElement loginbtn = driver.findElement(By.id("u_0_5_yT"));//automatically click on login button
+		loginbtn.click();
+		}
+
+}

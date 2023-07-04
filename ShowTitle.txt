@@ -1,0 +1,27 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D02ShowTitle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.selenium.dev/");
+		
+		//To show title
+		String title = driver.getTitle();
+		System.out.println("Title:" + title);
+		
+		if(title.contains("Selenium"))
+			System.out.println("Title match: Test case Pass");
+		else
+			System.out.println("Title not matching : Test case fail");
+		
+		driver.close();
+	}
+
+}

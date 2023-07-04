@@ -1,0 +1,31 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D05LocateByName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");
+		
+		//WebElement is a ReturnType for findElement() method
+		//Right click on the control -> inspect -> check the code with the tag-> copy "email "/"login"/"pass" and use (By.name("email"));
+		
+		WebElement emailId = driver.findElement(By.name("email"));
+		emailId.sendKeys("sharmashailja91@gmail.com");
+		
+		WebElement password = driver.findElement(By.name("pass"));
+		password.sendKeys("test@123");
+		
+		//click() funtion use to click on button;
+		WebElement loginbutton = driver.findElement(By.name("login"));
+		loginbutton.click();
+	}
+
+}

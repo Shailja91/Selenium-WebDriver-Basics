@@ -1,0 +1,28 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D03Showurl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		driver.get("https://www.flipkart.com/");
+		
+		// To show url
+		String url = driver.getCurrentUrl();
+		System.out.println("url:"+ url);
+		
+		if(url.contains("https://www.flipkart.com/"))
+			System.out.println("url match: Test case Pass");
+		else
+			System.out.println("url not matching: Test case Fail");
+		
+		driver.close();
+	}
+
+}

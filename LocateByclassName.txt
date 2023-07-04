@@ -1,0 +1,25 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D07GooglesearchByClassName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.google.com/");
+		
+		WebElement searchbar = driver.findElement(By.className("gLFyf"));
+		searchbar.sendKeys("Lord Jagannath");
+		searchbar.sendKeys(Keys.ENTER);
+		
+	}
+
+}
