@@ -1,0 +1,20 @@
+package com.WebDriverDemos;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class D14LocateByXpath {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Selenium jar file wedriver/ChromeDriver114/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.facebook.com/");
+		driver.findElement(By.xpath("//form[@class=\"_9vtf\\\"]/div/div/input")).sendKeys("sharmashailja91@gmail.com");
+			
+	}
+
+}
